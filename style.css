@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -333,6 +334,7 @@ body {
 
 @media (max-width: 768px) {
     .anime-hero {
+        display: flex;
         flex-direction: column;
         align-items: flex-start;
         padding: 60px 5%;
@@ -346,12 +348,15 @@ body {
     .anime-subtitle {
         font-size: 1.1rem;
         margin-top: 20px;
+        max-width: 100%;
     }
     .anime-buttons a {
         display: block;
         width: 100%;
         margin-bottom: 15px;
     }
+    
+
 }
 /* ABOUT ANIME STYLE */
 .anime-about {
@@ -770,3 +775,50 @@ body {
         width: 90%;
     }
 }
+/* TEXT REVEAL ANIMATION */
+/* TEXT REVEAL ANIMATION */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: revealText 1.2s ease forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.3s;
+}
+
+.delay-2 {
+    animation-delay: 0.8s;
+}
+
+@keyframes revealText {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.anime-title span {
+    color: #00f7ff;
+    border-right: none;
+    padding-right: 0;
+    animation: none;
+}
+
+@keyframes blink {
+    0%, 50% { border-color: #00f7ff; }
+    51%, 100% { border-color: transparent; }
+}
+.anime-content {
+    display: flex;
+    flex-direction: column;   /* 🔑 forces next line */
+    align-items: flex-start;
+    width: 100%;
+    max-width: 600px;
+}
+
+.anime-title,
+.anime-subtitle {
+    display: block;           /* 🔑 kills inline behavior */
+    width: 100%;
+}
+
