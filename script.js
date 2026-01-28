@@ -1,3 +1,4 @@
+
 const images = document.querySelectorAll(".gallery-grid img");
 const popup = document.getElementById("imagePopup");
 const popupImg = document.getElementById("popupImg");
@@ -47,5 +48,3 @@ function typeSubtitle() {
 }
 
 window.addEventListener("load", typeName);
-
-
