@@ -492,6 +492,10 @@ body {
     animation: fadeUp 1.5s ease;
 }
 
+.gallery-item {
+    position: relative;
+    overflow: visible;   /* 🔥 VERY IMPORTANT */
+}
 /* Gallery grid animations */
 .gallery-grid img {
     width: 100%;
@@ -659,5 +663,110 @@ body {
     .skill-card {
         width: 80%;
         margin-bottom: 20px;
+    }
+}
+/* PROJECTS SECTION */
+.anime-projects {
+    position: relative;
+    padding: 80px 10%;
+    background: linear-gradient(135deg, #1c1c2b, #2b1c3a);
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.anime-projects h2 {
+    font-size: 3rem;
+    color: #00f7ff;
+    margin-bottom: 50px;
+    animation: fadeUp 1.5s ease;
+}
+
+.projects-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.project-card {
+    width: 300px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid #00f7ff;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 0 30px #00f7ff;
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 20px;
+}
+
+.project-content h3 {
+    color: #00f7ff;
+    margin-bottom: 10px;
+}
+
+.project-content p {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* Floating Orbs */
+.orb-project1, .orb-project2, .orb-project3 {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(40px);
+    opacity: 0.4;
+    animation: floatSlow 10s infinite alternate;
+}
+
+.orb-project1 {
+    width: 150px;
+    height: 150px;
+    background: cyan;
+    top: 10%;
+    left: 5%;
+}
+
+.orb-project2 {
+    width: 200px;
+    height: 200px;
+    background: pink;
+    bottom: 15%;
+    right: 10%;
+}
+
+.orb-project3 {
+    width: 130px;
+    height: 130px;
+    background: purple;
+    top: 40%;
+    right: 35%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .projects-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 90%;
     }
 }
