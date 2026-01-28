@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <h2>My Portfolio</h2>
+    <nav>
+        <a href="#home">Home</a>
+        
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#gallery">Interests</a>
+        <a href="#contact">Contact</a>
+
+    </nav>
+</header>
+
+<section class="anime-hero">
+
+  <div class="anime-content">
+    <h1 class="anime-title">
+      Hi, <span id="typed-name"></span>
+    </h1>
+
+    <h2 class="anime-subtitle" id="typed-subtitle"></h2>
+  </div>
+
+  <!-- Avatar -->
+  <img class="anime-avatar"
+       src="Images/images_Av.png"
+       alt="avatar">
+
+  <!-- Orbs -->
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+  <div class="orb orb3"></div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section id="about" class="about anime-about">
+    <h2 class="about-title">About Me</h2>
+    <p class="about-desc">
+        I’m <span>Bushra Firdoaz</span>, a passionate final-year student exploring the worlds of Software development, Front end Designing and AI. I love crafting beautiful front-ends that are smart, interactive, and full of personality.I also have a keen interest in fashion designing and creative styling.
+    </p>
+
+    <div class="about-cards">
+        <div class="card">
+            <div class="icon">💻</div>
+            <h3>Python & Web Dev</h3>
+            <p>Building responsive websites and AI-powered solutions that make life easier.</p>
+        </div>
+        <div class="card">
+            <div class="icon">🎓</div>
+            <h3>Final Year Student</h3>
+            <p>Learning, experimenting, and preparing to take the tech world by storm!</p>
+        </div>
+        <div class="card">
+            <div class="icon">🎨</div>
+            <h3>AI Enthusiast</h3>
+            <p>Exploring machine learning and AI projects to create intelligent applications for the future.</p>
+        </div>
+    </div>
+
+    <!-- Floating Anime Orbs for About Section -->
+    <div class="orb orb-about1"></div>
+    <div class="orb orb-about2"></div>
+    <div class="orb orb-about3"></div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="skills anime-skills">
+    <h2>My Skills</h2>
+
+    <div class="skills-grid">
+        <div class="skill-card">
+            <div class="icon">🐍</div>
+            <h3>Python</h3>
+        </div>
+        <div class="skill-card">
+            <div class="icon">☕</div>
+            <h3>Java</h3>
+        </div>
+        <div class="skill-card">
+            <div class="icon">📦</div>
+            <h3>OOP Concepts</h3>
+        </div>
+        <div class="skill-card">
+            <div class="icon">📝</div>
+            <h3>MS Office</h3>
+        </div>
+        <div class="skill-card">
+            <div class="icon">🤖</div>
+            <h3>AI Basics</h3>
+        </div>
+        <div class="skill-card">
+            <div class="icon">📊</div>
+            <h3>ML Basics</h3>
+        </div>
+    </div>
+
+    <!-- Floating Anime Orbs for Skills Section -->
+    <div class="orb orb-skills1"></div>
+    <div class="orb orb-skills2"></div>
+    <div class="orb orb-skills3"></div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="projects anime-projects">
+    <h2>My Projects</h2>
+
+    <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card">
+            <img src="Images/Rover.jpeg" alt="Rover Project">
+            <div class="project-content">
+                <h3>Rover Project</h3>
+                <p>
+                    A smart rover system designed as a part of ISRO challenges that perform basic
+                    navigation tasks using sensors and logic-based control.
+                </p>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+            <img src="Images/E_Com.jpeg" alt="E-Commerce Project">
+            <div class="project-content">
+                <h3>E-Commerce Platform</h3>
+                <p>
+                    A responsive online shopping website with product listings, user-friendly UI,
+                    and smooth navigation using HTML, CSS, and JavaScript.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Floating Orbs -->
+    <div class="orb orb-project1"></div>
+    <div class="orb orb-project2"></div>
+    <div class="orb orb-project3"></div>
+</section>
+
+
+
+
+<!-- GALLERY -->
+<!-- GALLERY -->
+<!-- GALLERY -->
+<section id="gallery" class="gallery anime-gallery">
+    <h2>My Interests</h2>
+
+    <div class="gallery-grid">
+        
+        <div class="gallery-item">
+            <img src="Images/img2.jpeg" alt="AI">
+            <span class="caption">Artificial Intelligence</span>
+        </div>
+        <div class="gallery-item">
+            <img src="Images/img3.jpeg" alt="Front-end Development">
+            <span class="caption">Front-end Development</span>
+        </div>
+        <div class="gallery-item">
+            <img src="Images/img1.png" alt="Fashion Designing">
+            <span class="caption">Fashion Designing</span>
+        </div>
+        
+        <div class="gallery-item">
+    <img src="Images/travel.jpg" alt="Travel">
+    <span class="caption">Travelling</span>
+</div>
+
+    </div>
+
+    <!-- Floating Anime Orbs for Gallery -->
+    <div class="orb orb-gallery1"></div>
+    <div class="orb orb-gallery2"></div>
+    <div class="orb orb-gallery3"></div>
+</section>
+
+
+
+<!-- IMAGE POPUP -->
+<div id="imagePopup" class="popup">
+    <span class="close">&times;</span>
+    <img id="popupImg">
+</div>
+
+<!-- CONTACT -->
+<!-- CONTACT -->
+<section id="contact" class="contact anime-contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:bushrafirdoazshaik@gmail.com">bushrafirdoazshaik@gmail.com</a></p>
+    
+    <div class="contact-links">
+        <a href="https://www.linkedin.com/in/bushrafirdoaz" target="_blank" class="contact-link">LinkedIn</a>
+        <a href="https://github.com/bushrafirdoaz" target="_blank" class="contact-link">GitHub</a>
+    </div>
+</section>
+
+
+
+<script src="script.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,822 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
+/* HEADER */
+.header {
+    position: sticky;
+    top: 0;
+    background: black;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.header a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+/* HERO */
+.hero {
+    height: 80vh;
+    background: linear-gradient(to right, #141e30, #243b55);
+    color: white;
+    text-align: center;
+    padding-top: 120px;
+}
+
+.hero h1 {
+    font-size: 45px;
+}
+
+/* ABOUT */
+.about {
+    padding: 60px;
+    text-align: center;
+}
+
+.facts {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.facts div {
+    background: #f2f2f2;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* GALLERY */
+.gallery {
+    padding: 60px;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* added box-shadow transition */
+    transform-origin: center center; /* ensures scaling from center */
+    display: block; /* prevents small inline-block spacing issues */
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 247, 255, 0.5); /* soft neon glow on hover */
+}
+
+
+/* POPUP */
+.popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup img {
+    width: 90vw;
+    max-width: 900px;
+    height: auto;
+    max-height: 90vh;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.8);
+    animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 35px;
+    color: white;
+    cursor: pointer;
+}
+
+/* CONTACT */
+.contact {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+
+/* HERO / ANIME */
+.anime-hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 10%;
+    color: white;
+    overflow: hidden;
+    position: relative;
+}
+
+/* CONTACT SECTION */
+.anime-contact {
+    background: linear-gradient(135deg, #1c1c2b, #2b1c3a);
+    color: white;
+    text-align: center;
+    padding: 60px 10%;
+    position: relative;
+    overflow: hidden;
+}
+
+.anime-contact h2 {
+    font-size: 3rem;
+    color: #00f7ff;
+    margin-bottom: 30px;
+    animation: fadeUp 1.5s ease;
+}
+
+.anime-contact p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.anime-contact a {
+    color: #00f7ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.anime-contact a:hover {
+    color: #ff69b4;
+    transform: scale(1.1);
+    text-shadow: 0 0 10px #00f7ff, 0 0 20px #ff69b4;
+}
+
+.contact-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.contact-link {
+    padding: 12px 25px;
+    border: 2px solid #00f7ff;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+    background: #00f7ff;
+    color: black;
+    box-shadow: 0 0 20px #00f7ff;
+    transform: scale(1.1);
+}
+
+
+/* TITLE AND SUBTITLE */
+.anime-title {
+    font-size: 3.5rem;
+    animation: fadeUp 1.5s ease;
+}
+
+.anime-title span {
+    color: #00f7ff;
+}
+
+.anime-subtitle {
+    margin-top: 25px; /* increased margin to avoid collision */
+    font-size: 1.5rem;
+    color: #ccc;
+    line-height: 1.6; /* better readability */
+}
+
+/* BUTTONS */
+.anime-buttons {
+    margin-top: 30px; /* adds spacing below subtitle */
+}
+
+.anime-buttons a {
+    margin-right: 15px;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-glow {
+    background: #00f7ff;
+    color: black;
+    box-shadow: 0 0 20px #00f7ff;
+    transition: 0.3s;
+}
+
+.btn-glow:hover {
+    transform: scale(1.1);
+}
+
+.btn-outline {
+    border: 2px solid #00f7ff;
+    color: #00f7ff;
+}
+
+/* AVATAR */
+.anime-avatar {
+    width: 620px;
+    max-width: 100vw;
+    animation: float 4s ease-in-out infinite;
+    z-index: 2;
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5));
+}
+
+/* FLOATING ORBS */
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(40px);
+    opacity: 0.6;
+    animation: floatSlow 8s infinite alternate;
+}
+
+.orb1 {
+    width: 180px;
+    height: 180px;
+    background: cyan;
+    top: 10%;
+    left: 5%;
+}
+
+.orb2 {
+    width: 220px;
+    height: 220px;
+    background: purple;
+    bottom: 15%;
+    right: 10%;
+}
+
+.orb3 {
+    width: 120px;
+    height: 120px;
+    background: pink;
+    top: 40%;
+    right: 35%;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes floatSlow {
+    from { transform: translateY(0); }
+    to { transform: translateY(30px); }
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE FIXES */
+@media (max-width: 1024px) {
+    .anime-content {
+        max-width: 450px;
+    }
+    .anime-title {
+        font-size: 3rem;
+    }
+    .anime-subtitle {
+        font-size: 1.3rem;
+    }
+    .anime-buttons {
+        margin-top: 25px;
+    }
+    .anime-avatar {
+        width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .anime-hero {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 60px 5%;
+        text-align: left;
+    }
+    .anime-avatar {
+        width: 90%;
+        margin-top: 30px;
+        align-self: center;
+    }
+    .anime-subtitle {
+        font-size: 1.1rem;
+        margin-top: 20px;
+        max-width: 100%;
+    }
+    .anime-buttons a {
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    
+
+}
+/* ABOUT ANIME STYLE */
+.anime-about {
+    position: relative;
+    padding: 80px 10%;
+    background: linear-gradient(120deg, #1c1c2b, #2b1c3a);
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.about-title {
+    font-size: 3rem;
+    color: #00f7ff;
+    animation: fadeUp 1.5s ease;
+}
+
+.about-desc {
+    margin: 20px auto 50px auto;
+    font-size: 1.3rem;
+    max-width: 800px;
+    line-height: 1.8;
+    color: #ccc;
+}
+
+.about-desc span {
+    color: #ff69b4;
+    font-weight: bold;
+}
+
+.about-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid #00f7ff;
+    border-radius: 20px;
+    padding: 25px;
+    width: 280px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 0 30px #00f7ff;
+}
+
+.card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #00f7ff;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+/* Floating Orbs for About Section */
+.orb-about1, .orb-about2, .orb-about3 {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(40px);
+    opacity: 0.4;
+    animation: floatSlow 10s infinite alternate;
+}
+
+.orb-about1 {
+    width: 120px;
+    height: 120px;
+    background: cyan;
+    top: 10%;
+    left: 5%;
+}
+
+.orb-about2 {
+    width: 200px;
+    height: 200px;
+    background: pink;
+    bottom: 20%;
+    right: 10%;
+}
+
+.orb-about3 {
+    width: 150px;
+    height: 150px;
+    background: purple;
+    top: 40%;
+    right: 35%;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .about-cards {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-desc {
+        font-size: 1.1rem;
+    }
+}
+
+/* ANIME STYLE GALLERY */
+.anime-gallery {
+    position: relative;
+    padding: 80px 10%;
+    background: linear-gradient(120deg, #1c1c2b, #3a2b4a);
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.anime-gallery h2 {
+    font-size: 3rem;
+    color: #00f7ff;
+    margin-bottom: 40px;
+    animation: fadeUp 1.5s ease;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: visible;   /* 🔥 VERY IMPORTANT */
+}
+/* Gallery grid animations */
+.gallery-grid img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 20px #00f7ff;
+}
+
+/* Floating Orbs for Gallery Section */
+.orb-gallery1, .orb-gallery2, .orb-gallery3 {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(40px);
+    opacity: 0.4;
+    animation: floatSlow 12s infinite alternate;
+}
+
+.orb-gallery1 {
+    width: 100px;
+    height: 100px;
+    background: cyan;
+    top: 10%;
+    left: 10%;
+}
+
+.orb-gallery2 {
+    width: 180px;
+    height: 180px;
+    background: pink;
+    bottom: 15%;
+    right: 15%;
+}
+
+.orb-gallery3 {
+    width: 140px;
+    height: 140px;
+    background: purple;
+    top: 40%;
+    right: 30%;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .gallery-grid {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .gallery-grid img {
+        width: 90%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+}
+/* ANIME STYLE SKILLS */
+.anime-skills {
+    position: relative;
+    padding: 80px 10%;
+    background: linear-gradient(135deg, #2b1c3a, #1c1c2b);
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.anime-skills h2 {
+    font-size: 3rem;
+    color: #00f7ff;
+    margin-bottom: 50px;
+    animation: fadeUp 1.5s ease;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.skill-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid #00f7ff;
+    border-radius: 20px;
+    padding: 30px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+}
+
+.skill-card:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 0 30px #00f7ff;
+}
+
+.skill-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    
+}
+
+.skill-card h3 {
+    font-size: 1.3rem;
+    color: #00f7ff;
+}
+
+/* Floating Orbs for Skills Section */
+.orb-skills1, .orb-skills2, .orb-skills3 {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(40px);
+    opacity: 0.4;
+    animation: floatSlow 12s infinite alternate;
+}
+
+.orb-skills1 {
+    width: 120px;
+    height: 120px;
+    background: cyan;
+    top: 10%;
+    left: 5%;
+}
+
+.orb-skills2 {
+    width: 180px;
+    height: 180px;
+    background: pink;
+    bottom: 15%;
+    right: 10%;
+}
+
+.orb-skills3 {
+    width: 150px;
+    height: 150px;
+    background: purple;
+    top: 40%;
+    right: 35%;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .skills-grid {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .skill-card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+/* PROJECTS SECTION */
+.anime-projects {
+    position: relative;
+    padding: 80px 10%;
+    background: linear-gradient(135deg, #1c1c2b, #2b1c3a);
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.anime-projects h2 {
+    font-size: 3rem;
+    color: #00f7ff;
+    margin-bottom: 50px;
+    animation: fadeUp 1.5s ease;
+}
+
+.projects-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.project-card {
+    width: 300px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid #00f7ff;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 0 30px #00f7ff;
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 20px;
+}
+
+.project-content h3 {
+    color: #00f7ff;
+    margin-bottom: 10px;
+}
+
+.project-content p {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* Floating Orbs */
+.orb-project1, .orb-project2, .orb-project3 {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(40px);
+    opacity: 0.4;
+    animation: floatSlow 10s infinite alternate;
+}
+
+.orb-project1 {
+    width: 150px;
+    height: 150px;
+    background: cyan;
+    top: 10%;
+    left: 5%;
+}
+
+.orb-project2 {
+    width: 200px;
+    height: 200px;
+    background: pink;
+    bottom: 15%;
+    right: 10%;
+}
+
+.orb-project3 {
+    width: 130px;
+    height: 130px;
+    background: purple;
+    top: 40%;
+    right: 35%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .projects-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 90%;
+    }
+}
+/* TEXT REVEAL ANIMATION */
+/* TEXT REVEAL ANIMATION */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: revealText 1.2s ease forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.3s;
+}
+
+.delay-2 {
+    animation-delay: 0.8s;
+}
+
+@keyframes revealText {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.anime-title span {
+    color: #00f7ff;
+    border-right: none;
+    padding-right: 0;
+    animation: none;
+}
+
+@keyframes blink {
+    0%, 50% { border-color: #00f7ff; }
+    51%, 100% { border-color: transparent; }
+}
+.anime-content {
+    display: flex;
+    flex-direction: column;   /* 🔑 forces next line */
+    align-items: flex-start;
+    width: 100%;
+    max-width: 600px;
+}
+
+.anime-title,
+.anime-subtitle {
+    display: block;           /* 🔑 kills inline behavior */
+    width: 100%;
+}
