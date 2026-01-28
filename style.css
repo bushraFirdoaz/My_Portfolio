@@ -929,5 +929,17 @@ body {
         width: 90%;
     }
 }
+/* FIX EXTRA SPACE ISSUE */
+#resume {
+    margin-top: 0;
+    padding-top: 80px;
+}
+
+/* Remove unwanted white gap */
+body {
+    margin: 0;
+    padding: 0;
+}
+
 
 
