@@ -820,7 +820,7 @@ body {
     display: block;           /* 🔑 kills inline behavior */
     width: 100%;
 }
-
+/* ================= RESUME SECTION ================= */
 .anime-resume {
     position: relative;
     padding: 80px 10%;
@@ -929,3 +929,5 @@ body {
         width: 90%;
     }
 }
+
+
